@@ -1,0 +1,22 @@
+{
+  "name": "phishingasshole",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsmrcaga/phishing-bastard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsmrcaga/phishing-bastard/issues"
+  },
+  "homepage": "https://github.com/jsmrcaga/phishing-bastard#readme",
+  "dependencies": {
+    "fishingrod": "^3.2.0"
+  }
+}
