@@ -1,4 +1,4 @@
-const names = ['Martin','Bernard','Thomas','Petit','Robert','Richard','Durand','Dubois','Moreau','Laurent','Simon','Michel','Lefebvre','Leroy','Roux','David','Bertrand','Morel','Fournier','Girard','Bonnet','Dupont','Lambert','Fontaine','Rousseau','Vincent','Muller','Lefevre','Faure','Andre','Mercier','Blanc','Guerin','Boyer','Garnier','Chevalier','Francois','Legrand','Gauthier','Garcia 52','Perrin','Robin','Clement','Morin','Nicolas','Henry','Roussel','Mathieu','Gautier','Masson','Marchand','Duval','Denis','Dumont','Marie','Lemaire','Noel','Meyer','Dufour','Meunier','Brun','Blanchard','Giraud','Joly','Riviere','Lucas','Brunet','Gaillard','Barbier','Arnaud'];
+const names = ['Martin','Bernard','Thomas','Petit','Robert','Richard','Jean-jacques','Alaric','Durand','Dubois','Moreau','Laurent','Simon','Michel','Lefebvre','Leroy','Roux','David','Bertrand','Morel','Fournier','Girard','Bonnet','Dupont','Lambert','Fontaine','Rousseau','Vincent','Muller','Lefevre','Faure','Andre','Mercier','Blanc','Guerin','Boyer','Garnier','Chevalier','Francois','Legrand','Gauthier','Garcia 52','Perrin','Robin','Clement','Morin','Nicolas','Henry','Roussel','Mathieu','Gautier','Masson','Marchand','Duval','Denis','Dumont','Marie','Lemaire','Noel','Meyer','Dufour','Meunier','Brun','Blanchard','Giraud','Joly','Riviere','Lucas','Brunet','Gaillard','Barbier','Arnaud'];
 const passwords = ['1234', 'azerty', 'qwerty', 'chien', 'poulet', 'mon poto', 'what!!', 'OUI!!35', '1984', 'mnamour', 'wtf', 'monmdp', 'motdepasse', 'password', '1123456789', '!!!!uu', 'hahaHAHA', 'nope', 'yeaaah', 'LOL'];
 
 const fishingrod = require('fishingrod');
@@ -8,7 +8,7 @@ const qs = require('querystring');
 const http = require('http');
 
 function launch(){
-	setTimeout(function(){
+	setInterval(function(){
 		var name = names[Math.floor(names.length * Math.random())];
 		var lastname = names[Math.floor(names.length * Math.random())];
 		var password = passwords[Math.floor(Math.random() * passwords.length)];
@@ -26,7 +26,6 @@ function launch(){
 		}).catch((e)=>{
 			console.error('Error sending', e);
 		});
-		launch();
 	}, 1000);
 }
 
